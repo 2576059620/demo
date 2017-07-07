@@ -1,0 +1,266 @@
+/*×îÍâ²ã±ß¿ò*/
+.jd_box{
+	width: 100%;
+	max-width: 640px; /*×î´ó¿í¶È*/
+	min-width: 320px; /*×îÐ¡¿í¶È*/
+	margin:0 auto;  /*Ã‰ÃÃÃ‚ÃŽÂª0 Ã—Ã³Ã“Ã’Â¾Ã“Ã–Ã*/
+	background-color: rgb(252,244,253);
+}
+/*ÃÂ·Â²Â¿header*/
+.jd_box>.header{
+	position: fixed; /*Â¹ÃŒÂ¶Â¨Â¶Â¨ÃŽÂ»*/
+	left: 0;
+	top: 0;
+	height: 44px;
+	width: 100%;
+	z-index: 1000;/*Ã–ÂµÃ”Â½Â´Ã³Â£Â¬Ã€Ã«Ã“ÃƒÂ»Â§Ã”Â½Â½Ã¼*/
+}
+.jd_box>.header>.head_box{
+	background-color: rgba(199,21,33,1);/*rgbaÂ¿Ã‰Ã’Ã”Ã‰Ã¨Ã–ÃƒÃ‘Ã•Ã‰Â«ÂµÃ„ÃÂ¸ÃƒÃ·Â¶Ãˆ*/
+	height: 100%;
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+/*jdlogo*/
+.jd_box>.header>.head_box>.head_logo{
+	width: 60px;
+	height: 25px;
+	background-image: url(../images/logo.jpg);
+	background-size: 60px 25px;
+	margin: 0 5px;
+}
+/*formÂ±Ã­ÂµÂ¥*/
+.head_box>form{
+	flex: 1;
+	position: relative;
+}
+/*Ã‹Ã‘Ã‹Ã·ÃÂ¼Â±Ãª*/
+.head_box>form>.head_search{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	background-image: url(../images/search.png);
+	background-size: 20px 20px;
+	left: 5px;
+	top: 5px;
+}
+/*Ã‹Ã‘Ã‹Ã·Â¿Ã²*/
+.head_box>form>input{
+	width: 100%;
+	height: 30px;
+	border-radius: 15px;
+	padding-left: 25px;
+	/*background-color: rgba(255,255,255,0);*/
+}
+/*Ã“Ã’Â²Ã ÂµÃ‡Ã‚Â¼*/
+.head_box>.head_login{
+	width: 50px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+}
+
+/*Ã‚Ã–Â²Â¥ÃÂ¼*/
+.jd_banner{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.jd_banner>.image_box{
+	width: 1000%;
+	overflow: hidden;
+	transform: translateX(-10%);
+}
+.jd_banner>.image_box>li{
+	width: 10%;
+	float: left;
+}
+.jd_banner>.image_box>li>a,.jd_banner>.image_box>li>a>img{
+	width: 100%;
+	display: block;
+}
+
+/*ÂµÃ£*/
+.jd_banner>.circle_box{
+	width: 150px;
+	height: 10px;
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	overflow: hidden;
+	margin-left: -75px;
+}
+.jd_banner>.circle_box>li{
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	float: left;
+	margin-left: 10px;
+}
+/*Â»Ã±ÃˆÂ¡ÂµÃšÃ’Â»Â¸Ã¶liÂ£Â¬nth-child(1)Â±Ã­ÃŠÂ¾ÂµÃšÃ’Â»Â¸Ã¶liÃ—Ã“Ã”ÂªÃ‹Ã˜*/
+.jd_banner>.circle_box>li:nth-child(1){
+	margin-left: 0;
+}
+.jd_banner>.circle_box>.circle{
+	background-color: #fff;
+}
+
+/*ÂµÂ¼ÂºÂ½Â²Ã‹ÂµÂ¥*/
+.jd_nav{
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #e0e0e0;
+	background-color: white;
+}
+.jd_nav>.nav_first,.jd_nav>.nav_last{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.jd_nav>.nav_first>div,.jd_nav>.nav_last>div{
+	width: 80px;
+	height: 100px;
+}
+.jd_nav>.nav_first>div>img,.jd_nav>.nav_last>div>img{
+	width: 100%;
+	display: block;
+}
+.jd_nav>.nav_first>div>p,.jd_nav>.nav_last>div>p{
+	color:#333;
+	text-align: center;
+}
+
+/*Ã’Â³ÃƒÃ¦Ã–Ã·Ã’Â³*/
+.jd_main{
+	padding: 0 5px;
+}
+.jd_main>.main_box{
+	width: 100%;
+	background-color: white;
+	margin-top: 10px;
+	min-height: 50px;
+	box-shadow: 0 0 1px #e0e0e0;
+}
+.jd_main>.main_box>.main_box_title{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 0 5px;
+}
+.jd_main>.main_box>.title_no_border{
+	border-bottom: none;
+}
+
+.title_left{
+	float: left;
+}
+.title_right{
+	float: right;
+}
+.title_left>.title_clock{
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	float: left;
+	background-image: url(..//images/clock.png);
+	background-size: 20px 20px;
+}
+.title_text{
+	color: rgba(199,21,33,1);
+	font-size: 15px;
+	margin-left: 10px;
+	float: left;
+}
+.title_time{
+	float: left;
+	margin-left: 10px;
+	margin-top: 8px;
+}
+.title_time>span{
+	float: left;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	text-align: center;
+	background-color: #333;
+	color: white;
+	margin-left: 5px;
+}
+.title_time>.time_dot{
+	background-color: white;
+	color: black;
+	width: 5px;
+}
+/*å•†å“åˆ—è¡¨*/
+.main_box .box_icon{
+	margin-top: 10px;
+}
+.main_box_icon>ul{
+	width: 100%;
+	overflow: hidden;
+}
+.main_box_icon>ul>li{
+	float: left;
+	width: 33.33%;
+}
+.main_box_icon>ul>li>a{
+	display: block;
+	width: 100%;
+	border-right: 1px solid #c0c0c0;
+}
+.main_box_icon>ul>li:last-child>a{
+	border-right: none;
+}
+.main_box_icon>ul>li>a>img{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.main_box_icon>ul>li>p{
+	margin-top: 5px;
+	color: rgba(199,21,33,1);
+	text-align: center;
+}
+.main_box_icon>ul>li>p:last-child{
+	color: #666;
+	text-decoration: line-through;
+}
+
+.main_box .box_icon{
+	margin-top: 10px;
+}
+/*当页面中出现布局极其类似，只是位置稍微有些变化的，可以使用组合的样式，进行代码的简写*/
+.w_50{
+	width: 50%;
+	display: block;
+}
+.w_50>img{
+	width: 100%;
+	display: block;
+}
+.f_left{
+	float: left;
+}
+.f_right{
+	float: right;
+}
+.b_left{
+	border-left: 1px solid #e0e0e0;
+}
+.b_right{
+	border-right: 1px solid #e0e0e0;
+}
+.b_bottom{
+	border-bottom: 1px solid #e0e0e0;
+}
+.clear_f{
+	overflow:hidden;
+}

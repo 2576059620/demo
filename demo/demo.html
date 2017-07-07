@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+</head>
+<body>
+	<ul id="ul1">
+	</ul>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function(){
+			if (xhr.readyState == 4) {
+				var obj = JSON.parse(xhr.responseText);
+				console.log(obj);
+				var objArr = obj.records
+				//获取ul
+				var ul = document.getElementById('ul1')
+				// 将数据动态添加到页面，首先要遍历数组
+				for (var i = 0; i < objArr.length; i++) {
+					var li = document.createElement('li');
+					li.innerHTML = "<p>"+objArr[i].Name+"</p>";
+					ul.appendChild(li);
+
+					var li1 = document.createElement('li');
+					li1.innerHTML = "<p>"+objArr[i].City+"</p>";
+					ul.appendChild(li1);
+
+					var li2 = document.createElement('li');
+					li2.innerHTML = "<p>"+objArr[i].Country+"</p>";
+					ul.appendChild(li2);
+					
+					var li3 = document.createElement('li');
+					li3.innerHTML = "<p>"+objArr[i].age+"</p>";
+					ul.appendChild(li3);
+				}
+			}
+			
+		}
+		xhr.open("get","data/data.php?type=list");
+		xhr.send(null);
+	</script>
+</body>
+</html>

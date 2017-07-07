@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	 <div class="time">  
+   <span>距离本场结束 </span>  
+        <span id="t_day">00天</span>  
+        <span id="t_hour">00时</span>  
+        <span id="t_minute">00分</span>  
+        <span id="t_second">00秒</span>  
+    </div>  
+    <script>  
+$(function(){  
+window.setInterval(getTimer,10);/*设置不间断定时器执行getTimer函数*/  
+})  
+  
+    function getTimer(){  
+          var endtime=new Date("2017/07/06 00:00:00");  /*定义结束时间*/  
+          var nowtime=new Date();/*获取当前时间*/  
+          var cha=endtime.getTime()-nowtime.getTime();/*得到它们相差的时间*/  
+          var day=Math.floor(cha/1000/60/60/24); /*划分出时分秒*/  
+          var hour=Math.floor(cha/1000/60/60%24);  
+          var minute=Math.floor(cha/1000/60%60);  
+          var  second=Math.floor(cha/1000%60);  
+          if (minute <= 9) minute = '0' + minute;  
+          if (second <= 9) second = '0' + second;  
+          if (hour <= 9) hour = '0' + hour;  
+          $("#t_day").html(day+"天"); /*写到页面中*/  
+          $("#t_hour").html(hour+"时");  
+          $("#t_minute").html(minute+"分");  
+          $("#t_second").html(second+"秒");  
+}  
+  
+  
+  
+  
+</script>  
+</body>
+</html>

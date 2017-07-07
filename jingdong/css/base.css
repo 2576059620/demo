@@ -1,0 +1,32 @@
+/*base.css主要用于定义一些通用的样式*/
+*{
+	margin: 0;
+	padding: 0;
+	/*去掉点击高亮效果-主要针对移动端*/
+	-webkit-tap-highlight-color:transparent;
+	/*设置元素宽高计算方式*/
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+/*设置统一的字体*/
+body{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #333;
+}
+a{
+	color: #333;
+	text-decoration: none;/*去掉下划线*/
+}
+a:hover{
+	text-decoration: none;
+}
+/*重置input样式*/
+input{
+	border: none;
+	outline: none;/*去掉选中状态下的高亮效果*/
+	-webkit-appearance:none;/*清除移动端默认的表单样式*/
+}
+ul,li{
+	list-style-type: none;/*去掉列表样式*/
+}
